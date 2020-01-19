@@ -8,6 +8,16 @@ bridge to [Ableton Link](https://www.ableton.com/en/link/).
 
 [![License](https://img.shields.io/badge/License-Eclipse%20Public%20License%202.0-blue.svg)](#licenses)
 
+lib-carabiner allows you to embed Carabiner inside a Java project, and
+automatically run it when needed, as long as you are running on a
+supported operating system and processor architecture. The combinations
+currently supported are:
+
+* Linux Intel 64 bit
+* macOS Intel 64 bit
+* Raspberry Pi (Linux ARM 32 bit)
+* Windows Intel 64 bit
+
 ## Installing
 
 lib-carabiner is available through Maven Central, so to use it in your
