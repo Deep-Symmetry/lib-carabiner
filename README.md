@@ -26,9 +26,9 @@ Maven project, all you need is to include the appropriate dependency.
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.deepsymmetry/lib-carabiner/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.deepsymmetry/lib-carabiner)
 
 Click the **maven central** badge above to view the repository entry
-for beat-link. The proper format for including the latest release as a
+for lib-carabiner. The proper format for including the latest release as a
 dependency in a variety of tools, including Leiningen if you are using
-beat-link from Clojure, can be found in the **Dependency Information**
+lib-carabiner from Clojure, can be found in the **Dependency Information**
 section.
 
 lib-carabiner uses [slf4j](http://www.slf4j.org/manual.html) to allow
