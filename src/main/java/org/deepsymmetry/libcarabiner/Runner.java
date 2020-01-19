@@ -101,6 +101,11 @@ public class Runner {
         return "Carabiner_" + getOSComponent() + "_" + getArchComponent();
     }
 
+    /**
+     * Checks whether it will be possible to run Carabiner on the current computer.
+     *
+     * @return {@code true} if we expect to be able to extract and run a compatible Carabiner binary.
+     */
     public boolean canRunCarabiner() {
         return Runner.class.getResource(getExecutableName()) != null;
     }
@@ -108,31 +113,41 @@ public class Runner {
     /**
      * Holds the file into which we extract and run Carabiner.
      */
-    private static File carabiner;
+    private File carabiner;
 
     /**
-     * Creates the temporary file used for unpacking the native Carabiner executable.
-     * This file is marked to be deleted when the JVM exits.
+     * Creates the temporary Carabiner executable file compatible with the current operating system and
+     * processor architecture if we haven't already done so. This file is marked to be deleted when the JVM exits.
      *
-     * @return The temporary file for the native executable.
+     * @return The temporary file holding the native executable.
      *
      * @throws IOException if there is a problem creating the file.
+     * @throws IllegalStateException if we can't find a compatible binary.
      */
-    private static File createTempFile() throws IOException {
+    private File createExecutable() throws IOException {
 
         if (carabiner != null) {
             // We have already created it, so simply return it
             return carabiner;
         }
 
+        InputStream binary = Runner.class.getResourceAsStream(getExecutableName());
+        if (binary == null) {
+            throw new IllegalStateException("Incompatible platform: there is no Carabiner binary named " + getExecutableName());
+        }
+
         try {
             carabiner = File.createTempFile("Carabiner", ".exe");
+            carabiner.deleteOnExit();
 
             if (!carabiner.canWrite()) {
                 throw new IOException("Unable to write to temporary file " + carabiner);
             }
 
-            carabiner.deleteOnExit();
+            Files.copy(binary, carabiner.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            if (!carabiner.setExecutable(true)) {
+                throw new IOException("Unable to make binary file executable, " + carabiner);
+            }
             return carabiner;
 
         } catch (final IOException e) {
@@ -140,16 +155,4 @@ public class Runner {
         }
     }
 
-    /**
-     * Copies the specified input stream to the specified output file.
-     *
-     * @param input   The input stream to be copied.
-     * @param output  The output file to which the stream should be copied.
-     *
-     * @throws IOException If the copy failed.
-     */
-    private static void copy(final InputStream input, final File output) throws IOException {
-        // TODO: Just call this directly, rather than using this method.
-        Files.copy(input, output.toPath(), StandardCopyOption.REPLACE_EXISTING);
-    }
 }
