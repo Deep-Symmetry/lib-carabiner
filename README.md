@@ -53,7 +53,7 @@ to get that singleton, and then you can call
 to determine whether a native build of Carabiner is offered for the
 current operating system and processor architecture. If so, you can call
 [`start()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#start())
-to extract and run it, and  
+to extract and run it, and
 [`stop()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#stop())
 when you want to terminate it.
 
@@ -70,7 +70,7 @@ Distributed under the [Eclipse Public License
 in any fashion, you are agreeing to be bound by the terms of this
 license. You must not remove this notice, or any other, from this
 software. A copy of the license can be found in
-[epl-2.0.md](https://github.com/Deep-Symmetry/afterglow/blob/master/epl-2.0.md)
+[LICENSE.md](https://github.com/Deep-Symmetry/afterglow/blob/master/LICENSE.md)
 within this project.
 
 The included copies of Carabiner are distributed under the [GNU
