@@ -70,11 +70,11 @@ Distributed under the [Eclipse Public License
 in any fashion, you are agreeing to be bound by the terms of this
 license. You must not remove this notice, or any other, from this
 software. A copy of the license can be found in
-[LICENSE.md](https://github.com/Deep-Symmetry/afterglow/blob/master/LICENSE.md)
+[LICENSE.md](https://github.com/Deep-Symmetry/lib-carabiner/blob/master/LICENSE.md)
 within this project.
 
 The included copies of Carabiner are distributed under the [GNU
 General Public License, version
 2](https://opensource.org/licenses/GPL-2.0). A copy of the license can be found in
-[gpl-2.0.md](https://github.com/Deep-Symmetry/afterglow/blob/master/gpl-2.0.md)
+[gpl-2.0.md](https://github.com/Deep-Symmetry/lib-carabiner/blob/master/gpl-2.0.md)
 within this project.
