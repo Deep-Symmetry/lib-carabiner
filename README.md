@@ -45,8 +45,17 @@ Carabiner.
 See the [API Documentation](http://deepsymmetry.org/lib-carabiner/apidocs/)
 for full details, but here is a nutshell guide:
 
-* TODO: Write this!
-
+The package `org.deepsymmetry.libcarabiner` offers a `Runner` singleton
+that manages an embedded native instance of Carabiner for you. Call
+[`getInstance()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#getInstance())
+to get that singleton, and then you can call
+[`canRunCarabiner()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#canRunCarabiner())
+to determine whether a native build of Carabiner is offered for the
+current operating system and processor architecture. If so, you can call
+[`start()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#start())
+to extract and run it, and  
+[`stop()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#stop())
+when you want to terminate it.
 
 ## Licenses
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lib-carabiner</title>
+</head>
+<body>
+<p>A library for embedding Carabiner into a Java project.</p>
+
+<p>Overview and installation instructions are found on the <a href="https://github.com/Deep-Symmetry/lib-carabiner"
+                                                              target="_blank">Project page</a> on GitHub.</p>
+
+<p>
+    The package {@link org.deepsymmetry.libcarabiner} provides a {@link org.deepsymmetry.libcarabiner.Runner} singleton
+    for creating and running a native binary of the Carabiner project that is compatible with the current execution
+    environment, if possible. You can call {@link org.deepsymmetry.libcarabiner.Runner#canRunCarabiner()} to check for
+    that compatibility, and then {@link org.deepsymmetry.libcarabiner.Runner#start()} to extract and run it. See
+    the full class documentation for more options and details.
+</p>
+
+<p>A good example of an application built using this library is
+    <a href="https://github.com/Deep-Symmetry/beat-link-trigger" target="_blank">Beat Link Trigger</a>.</p>
+
+</body>
+</html>
