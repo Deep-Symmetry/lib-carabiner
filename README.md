@@ -57,6 +57,13 @@ to extract and run it, and
 [`stop()`](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Runner.html#stop())
 when you want to terminate it.
 
+It also offers a [`Message`
+class](https://deepsymmetry.org/lib-carabiner/apidocs/org/deepsymmetry/libcarabiner/Message.html)
+that you can construct using the response lines that Carabiner sends
+you, and it will parse their
+[edn](https://github.com/edn-format/edn#edn) structure for you, giving
+you a convenient Java String and Map to work with instead.
+
 ## Licenses
 
 <img align="right" alt="Deep Symmetry"

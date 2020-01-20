@@ -10,11 +10,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Manages the extraction of a compatible version of the Carabiner executable for the current platform, as well
+ * <p>Manages the extraction of a compatible version of the Carabiner executable for the current platform, as well
  * as starting and stopping the process when needed, with appropriate command-line arguments, and logs any output
- * or errors produced by the process.
+ * or errors produced by the process.</p>
  *
- * Created by James Elliott on 2020-01-18.
+ * <p>Created by James Elliott on 2020-01-18.</p>
  */
 public class Runner {
 
