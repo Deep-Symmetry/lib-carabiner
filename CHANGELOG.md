@@ -15,5 +15,5 @@ Initial release (version number chosen to match embedded Carabiner
 version).
 
 
-[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v0.1.3...HEAD
-[0.1.3]: https://github.com/Deep-Symmetry/lib-carabiner/compare/87f56a3e2a1f8d3822b68214d9ea9da0f3ced839...v0.1.3
+[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.3...HEAD
+[0.1.3]: https://github.com/Deep-Symmetry/lib-carabiner/compare/87f56a3e2a1f8d3822b68214d9ea9da0f3ced839...v1.1.3
