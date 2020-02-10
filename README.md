@@ -6,7 +6,7 @@ Java wrapper for the
 [Carabiner](https://github.com/Deep-Symmetry/carabiner#carabiner)
 bridge to [Ableton Link](https://www.ableton.com/en/link/).
 
-[![License](https://img.shields.io/badge/License-Eclipse%20Public%20License%202.0-blue.svg)](#licenses)
+[Licenses](#licenses)
 
 lib-carabiner allows you to embed Carabiner inside a Java project, and
 automatically run it when needed, as long as you are running on a

@@ -6,7 +6,14 @@ This change log follows the conventions of
 
 ## [Unreleased][unreleased]
 
-Initial project development.
+Nothing so far.
 
 
-[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/87f56a3e2a1f8d3822b68214d9ea9da0f3ced839...HEAD
+## [0.1.3] - 2020-02-09
+
+Initial release (version number chosen to match embedded Carabiner
+version).
+
+
+[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/Deep-Symmetry/lib-carabiner/compare/87f56a3e2a1f8d3822b68214d9ea9da0f3ced839...v0.1.3
