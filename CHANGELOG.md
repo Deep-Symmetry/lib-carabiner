@@ -8,6 +8,13 @@ This change log follows the conventions of
 
 Nothing so far.
 
+## [1.1.5] - 2020-12-28
+
+### Changed:
+
+- Updated embedded Carabiner copies to version 1.1.5, incorporating
+  Ableton Link 3.0.3.
+
 ## [1.1.4] - 2020-07-01
 
 ### Changed:
@@ -20,6 +27,7 @@ Initial release (version number chosen to match embedded Carabiner
 version).
 
 
-[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.4...HEAD
+[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.5...HEAD
+[1.1.5]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.3...v1.1.4
 [1.1.3]: https://github.com/Deep-Symmetry/lib-carabiner/compare/87f56a3e2a1f8d3822b68214d9ea9da0f3ced839...v1.1.3
