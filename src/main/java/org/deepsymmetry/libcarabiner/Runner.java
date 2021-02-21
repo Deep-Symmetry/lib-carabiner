@@ -103,7 +103,13 @@ public class Runner {
      * @return the name of the resource holding the compatible binary, if one can be found.
      */
     public String getExecutableName() {
-        return "Carabiner_" + getOSComponent() + "_" + getArchComponent();
+        final String os = getOSComponent();
+        String arch = getArchComponent();
+        // Handle the special case of the two macOS architectures supported by one universal binary.
+        if (os.equals("Mac") && (arch.equals("arm64") || arch.equals("x64"))) {
+            arch = "arm64_x64";
+        }
+        return "Carabiner_" + os + "_" + arch;
     }
 
     /**

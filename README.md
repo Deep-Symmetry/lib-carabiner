@@ -14,7 +14,7 @@ supported operating system and processor architecture. The combinations
 currently supported are:
 
 * Linux Intel 64 bit
-* macOS Intel 64 bit
+* macOS Intel 64 bit and Apple Silicon (ARM 64 bit) universal binary
 * Raspberry Pi (Linux ARM 32 bit)
 * Windows Intel 64 bit
 
@@ -64,13 +64,19 @@ you, and it will parse their
 [edn](https://github.com/edn-format/edn#edn) structure for you, giving
 you a convenient Java String and Map to work with instead.
 
+> If you have any problems or questions, please open an
+> [issue](https://github.com/Deep-Symmetry/lib-carabiner/issues) or join
+> the conversation on [Carabiner's Zulip
+> stream](https://deep-symmetry.zulipchat.com/join/wdwsoeiv54bz3coshgjomaqy/).
+
+
 ## Licenses
 
 <img align="right" alt="Deep Symmetry"
  src="doc/assets/DS-logo-bw-200-padded-left.png"
  width="216" height="123">
 
-Copyright © 2020 [Deep Symmetry, LLC](http://deepsymmetry.org)
+Copyright © 2020-2021 [Deep Symmetry, LLC](http://deepsymmetry.org)
 
 Distributed under the [Eclipse Public License
 2.0](https://opensource.org/licenses/EPL-2.0). By using this software
