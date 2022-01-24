@@ -6,9 +6,14 @@ This change log follows the conventions of
 
 ## [Unreleased][unreleased]
 
-Nothing so far.
+### Changed:
+
+- Compile for compatibility back to Java 8, to work with Afterglow (in particular, the
+  user guide and API documentation build on Netlify which still uses such an ancient version.)
 
 ## [1.1.6] - 2021-02-20
+
+### Changed:
 
 - Updated the macOS carabiner copy to version 1.1.6, adding native
   support for Apple Silicon machines.
