@@ -73,7 +73,7 @@ you a convenient Java String and Map to work with instead.
 ## Licenses
 
 <a href="http://deepsymmetry.org"><img align="right" alt="Deep Symmetry"
- src="doc/modules/ROOT/assets/images/DS-logo-github.png" width="250" height="150"></a>
+ src="doc/assets/DS-logo-github.png" width="250" height="150"></a>
 
 Copyright © 2020-2022 [Deep Symmetry, LLC](http://deepsymmetry.org)
 
