@@ -1,6 +1,6 @@
 # lib-carabiner
 
-<img align="right" width="150" src="doc/assets/carabiner.jpg">
+<img align="right" width="150" src="doc/assets/carabiner.png">
 
 Java wrapper for the
 [Carabiner](https://github.com/Deep-Symmetry/carabiner#carabiner)
@@ -40,6 +40,19 @@ It also uses [edn-java](https://github.com/bpsm/edn-java#edn-java) to
 parse and build the Extensible Data Notation format messages used by
 Carabiner.
 
+## Getting Help
+
+<a href="http://zulip.com"><img align="right" alt="Zulip logo"
+ src="doc/assets/zulip-icon-circle.svg" width="128" height="128"></a>
+
+Deep Symmetry&rsquo;s projects are generously sponsored with hosting
+by <a href="https://zulip.com">Zulip</a>, an open-source modern team
+chat app designed to keep both live and asynchronous conversations
+organized. Thanks to them, you can <a
+href="https://deep-symmetry.zulipchat.com/#narrow/stream/278354-carabiner">chat
+with our community</a>, ask questions, get inspiration, and share your
+own ideas.
+
 ## Usage
 
 See the [API Documentation](http://deepsymmetry.org/lib-carabiner/apidocs/)
@@ -66,8 +79,8 @@ you a convenient Java String and Map to work with instead.
 
 > If you have any problems or questions, please open an
 > [issue](https://github.com/Deep-Symmetry/lib-carabiner/issues) or join
-> the conversation on [Carabiner's Zulip
-> stream](https://deep-symmetry.zulipchat.com/join/wdwsoeiv54bz3coshgjomaqy/).
+> the conversation on [Carabiner&rsquo;s Zulip
+> stream](https://deep-symmetry.zulipchat.com/#narrow/stream/278354-carabiner).
 
 
 ## Licenses
@@ -75,7 +88,7 @@ you a convenient Java String and Map to work with instead.
 <a href="http://deepsymmetry.org"><img align="right" alt="Deep Symmetry"
  src="doc/assets/DS-logo-github.png" width="250" height="150"></a>
 
-Copyright © 2020-2022 [Deep Symmetry, LLC](http://deepsymmetry.org)
+Copyright © 2020-2023 [Deep Symmetry, LLC](http://deepsymmetry.org)
 
 Distributed under the [Eclipse Public License
 2.0](https://opensource.org/licenses/EPL-2.0). By using this software
