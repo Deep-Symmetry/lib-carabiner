@@ -1,7 +1,5 @@
 package org.deepsymmetry.libcarabiner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import us.bpsm.edn.Keyword;
 import us.bpsm.edn.Symbol;
 import us.bpsm.edn.parser.Parseable;
@@ -35,9 +33,6 @@ import java.util.Map;
  * <p>Created by James Elliott on 2020-01-19.</p>
  */
 public class Message {
-
-    private static final Logger logger = LoggerFactory.getLogger(Message.class);
-
     /**
      * Identifies the type of the message that was received, which was the symbol that the message started with.
      * This value is interned, so message types can be compared for equality by object identity.
@@ -45,10 +40,18 @@ public class Message {
     public final String messageType;
 
     /**
-     * Holds the details sent after the message type, if any. Will be {@code null} if there were no details.
-     * Keys in the map are interned strings, so they can be compared for equality by object identity.
+     * Holds the details sent after the message type.
+     *
+     * <p>For messages {@code status}, {@code beat-at-time}, and {@code phase-at-time}, the details will be a
+     * {@link Map} of keys to values.
+     * Keys in the map are interned strings, so they can be compared for equality by object identity.</p>
+     *
+     * <p>For {@code version} messages, the details will be a {@link String}.</p>
+     *
+     * <p>For {@code unsupported} messages, the details will be the {@link Symbol} corresponding to the
+     * command that was not supported by Carabiner.</p>
      */
-    public final Map<String, Object> details;
+    public final Object details;
 
     /**
      * Construct an instance given an <a href="https://github.com/edn-format/edn#edn">edn</a>
@@ -70,22 +73,46 @@ public class Message {
 
         // Now see if there is a payload.
         read = parser.nextValue(parseable);
-        if (read == Parser.END_OF_INPUT) {
-            details = null;
-        } else if (read instanceof Map) {
-            details = Collections.unmodifiableMap(((Map<Keyword, Object>) read).entrySet().stream().collect(
-                    HashMap::new,
-                    (map, e) -> map.put(e.getKey().getName().intern(), e.getValue()),
-                    Map::putAll
-            ));
-        } else {
-            System.out.println(read);
-            throw new IllegalArgumentException("Carabiner message details, if present, must be a map. Received: " + response);
+        switch (messageType) {
+            case "status":
+            case "beat-at-time":
+            case "phase-at-time":
+                if (read instanceof Map) {
+                    //noinspection unchecked
+                    details = Collections.unmodifiableMap(((Map<Keyword, Object>) read).entrySet().stream().collect(
+                            HashMap::new,
+                            (map, e) -> map.put(e.getKey().getName().intern(), e.getValue()),
+                            Map::putAll
+                    ));
+                } else {
+                    throw new IllegalArgumentException("Carabiner " + messageType +
+                            " response details must be a map. Received: " + response);
+                }
+                break;
+
+            case "version":
+                if (read instanceof String) {
+                    details = read;
+                } else {
+                    throw new IllegalArgumentException("Carabiner version response details must be a string. Received: " + response);
+                }
+                break;
+
+            case "unsupported":
+                if (read instanceof Symbol) {
+                    details = read;
+                } else {
+                    throw new IllegalArgumentException("Carabiner unsupported response details must be a symbol. Received: " + response);
+                }
+                break;
+
+            default:
+                throw new IllegalArgumentException("Unrecognized Carabiner response message :" + response);
         }
 
         read = parser.nextValue(parseable);
         if (read != Parser.END_OF_INPUT) {
-            throw new IllegalArgumentException("Carabiner messages must consist of a symbol optionally followed by a map. Received: " +
+            throw new IllegalArgumentException("Carabiner messages must consist of a symbol followed by a map, string, or symbol. Received: " +
                     response);
         }
     }

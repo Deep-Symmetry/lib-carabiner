@@ -8,6 +8,8 @@ This change log follows the conventions of
 
 ### Changed:
 
+- The `details` field in a `Message` is now an `Object` rather than a `Map`, because the
+  `version` response sends a `String` and the `unsupported` response sends a `Symbol`.
 - Compile for compatibility back to Java 8, to work with Afterglow (in particular, the
   user guide and API documentation build on Netlify which still uses such an ancient version.)
 
