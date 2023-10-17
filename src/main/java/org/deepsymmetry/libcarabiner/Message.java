@@ -107,7 +107,7 @@ public class Message {
                 break;
 
             default:
-                throw new IllegalArgumentException("Unrecognized Carabiner response message :" + response);
+                throw new IllegalArgumentException("Unrecognized Carabiner response message: " + response);
         }
 
         read = parser.nextValue(parseable);
