@@ -116,4 +116,9 @@ public class Message {
                     response);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Message[" + messageType + ", details: " + details + "]";
+    }
 }
