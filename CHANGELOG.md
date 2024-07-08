@@ -6,10 +6,17 @@ This change log follows the conventions of
 
 ## [Unreleased][unreleased]
 
+Nothing so far.
+
+
+## [1.2.0] - 2024-07-08
+
 ### Changed:
 
 - The `details` field in a `Message` is now an `Object` rather than a `Map`, because the
   `version` response sends a `String` and the `unsupported` response sends a `Symbol`.
+- Updated embedded Carabiner copies to version 1.2.0, incorporating
+  Ableton Link 3.1.2.
 - Compile for compatibility back to Java 8, to work with Afterglow (in particular, the
   user guide and API documentation build on Netlify which still uses such an ancient version.)
 
@@ -39,7 +46,8 @@ Initial release (version number chosen to match embedded Carabiner
 version).
 
 
-[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.6...HEAD
+[unreleased]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.6...v1.2.0
 [1.1.6]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/Deep-Symmetry/lib-carabiner/compare/v1.1.3...v1.1.4
